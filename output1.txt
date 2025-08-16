@@ -1,0 +1,2 @@
+This is the first line of the character stream example.
+Hello, this is a character stream example!
