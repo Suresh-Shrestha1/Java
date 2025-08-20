@@ -362,3 +362,23 @@ public class InsertIntoEmployeeTable {
 - Ensure MySQL server is running!
 
 ---
+
+## 🔐 6. Common Errors & Fixes
+|Error  |   Solution|
+|------|------------|
+|class not found    |   Make sure you run from correct folder and use full class name.|
+|package does not exist |	Check your folder/package structure.|
+|cannot find symbol |	Usually means typo or missing import.|
+|File not saving or writing	| Check if file exists and has write permissions.|
+
+---
+
+## 🌍 7. Explore Further Topics
+📚 Try building small apps like:
+- 🛒 Inventory Manager
+- 📓 Notes App with File Save
+- 🎮 Basic Number Guessing Game using GUI
+- 📋 To-do List with GUI + File Support
+- 📦 Personal Finance Tracker
+
+---
