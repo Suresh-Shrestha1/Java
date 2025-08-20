@@ -72,3 +72,37 @@ JAVA CLASS/
 ```
 
 ---
+
+## 🧠 New Learning Sections
+
+## 📦 1. Getting Started with Java(New!)
+
+Before jumping into the code:
+
+**✅ Install Java Development Kit (JDK) on your system.**
+
+🔗 [JDK Download Link](https://www.oracle.com/java/technologies/javase-download.html)
+
+**✅ Use an IDE:**
+
+Try VS Code, IntelliJ IDEA, or Eclipse for a better coding experience.
+
+>💡 VS Code is lightweight and beginner-friendly.
+
+**✅ Check Java version:**
+```
+java -version
+```
+
+This will display the Java version installed on your system.
+
+📄 `Hello.java`
+```
+public class Hello{
+   public static void main(String[] args) {
+      System.out.println("Hello, World!");
+      }
+}
+```
+
+---
