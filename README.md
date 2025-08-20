@@ -186,3 +186,179 @@ public class Student {
 - Load list of students using ArrayList
   
 ---
+
+## 🛠️ 5. Compilation & Execution Tips
+
+### ✅ PART 1. Compiling Java Programs
+To compile a Java program, you can use the `javac` command in the terminal. Here's an :
+
+1. **🔧 Compile the Java file:**
+   ```
+   javac FileName.java
+   ```
+2. **▶️ Run the compiled class:**
+   ```
+   java FileName
+   ```
+   🧪 Example:
+   ```
+   javac factorial.java
+   java factorial
+   ```
+
+---
+
+### ✅ PART 2: Compiling & Running Java with Packages
+
+### 📁 Example Project Structure:
+
+```
+JAVA_CLASS/
+│
+├── myPackage/
+│   └── packageDemo.java
+│
+└── myOtherPackage/
+    └── Person.java
+```
+
+### 🧾 Step 1: Declare Packages Inside Java Files
+
+`packageDemo.java`
+```java
+package myPackage;
+import myOtherPackage.Person;
+
+public class packageDemo {
+    public static void main(String[] args) {
+        System.out.println("This is a package demo!");
+        Person p = new Person();
+        p.show();
+    }
+}
+```
+
+`Person.java`
+```java
+package myOtherPackage;
+
+public class Person {
+    public void show() {
+        System.out.println("Hello from Person class in myOtherPackage!");
+    }
+}
+```
+
+### 🧪 Step 2: Compile Java Files with Package Structure
+
+From the JAVA_CLASS/ directory:
+```
+javac -d . myPackage/packageDemo.java myOtherPackage/Person.java
+```
+
+**✅ This will:**
+
+- Compile both files.
+- Create folders myPackage/ and myOtherPackage/ (if not present).
+- Place .class files in the right folders.
+
+### ▶️ Step 3: Run the Main Class
+
+From the root folder (JAVA_CLASS/):
+```
+java myPackage.packageDemo
+```
+>💡 Note: Run using fully qualified class name: packageName.className
+
+>💡 Note: The package name is case-sensitive.
+
+---
+
+### ✅ PART 3: SQL Setup for JDBC Programs (MySQL)
+
+You mentioned files like:
+- InsertIntoEmployeeTable.java
+- SelectAllEmployee.java
+
+...will require MySQL setup and a JDBC connector. Here's how to set it up.
+
+### 🐬 Step 1: Install MySQL
+1. Download & install:
+
+      🔗 [MySQL Community Server](https://dev.mysql.com/downloads/mysql/)
+2. Optionally install:
+
+      🛠️ [MySQL Workbench (GUI)](https://dev.mysql.com/downloads/connector/j/)
+
+### 🔗 Step 2: Add MySQL JDBC Driver
+
+1. Download connector:
+
+   🔗 [MySQL Connector/J](https://dev.mysql.com/downloads/connector/j/)
+
+2. Compile and Run (Linux/macOS):
+```
+javac -cp .:mysql-connector-j-8.4.0.jar InsertIntoEmployeeTable.java
+java -cp .:mysql-connector-j-8.4.0.jar InsertIntoEmployeeTable
+```
+
+**On Windows (use ;):**
+```
+javac -cp .;mysql-connector-j-8.4.0.jar InsertIntoEmployeeTable.java
+java -cp .;mysql-connector-j-8.4.0.jar InsertIntoEmployeeTable
+```
+>💡 Note: The path to the JDBC driver may vary depending on your system and MySQL version
+
+### 💾 Step 3: Create Database and Table
+```
+-- Create DB
+CREATE DATABASE java_class;
+
+-- Use DB
+USE java_class;
+
+-- Create Table
+CREATE TABLE employee (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    department VARCHAR(50),
+    salary DOUBLE
+);
+
+-- Insert Data
+INSERT INTO employee VALUES 
+(1, 'Alice', 'HR', 55000),
+(2, 'Bob', 'IT', 65000),
+(3, 'Charlie', 'Finance', 60000);
+```
+
+**🔌 Sample JDBC Connection and Insert Code**
+```
+import java.sql.*;
+
+public class InsertIntoEmployeeTable {
+    public static void main(String[] args) {
+        try {
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/java_class", "root", "your_password"
+            );
+            
+            Statement stmt = con.createStatement();
+            String sql = "INSERT INTO employee VALUES (4, 'David', 'Marketing', 58000)";
+            int result = stmt.executeUpdate(sql);
+
+            if (result > 0)
+                System.out.println("Data inserted successfully.");
+            con.close();
+        } catch (Exception e) {
+            System.out.println("Error: " + e);
+        }
+    }
+}
+```
+
+**✅ Replace:**
+- "your_password" with your actual MySQL password
+- Ensure MySQL server is running!
+
+---
