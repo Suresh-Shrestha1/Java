@@ -154,3 +154,35 @@ public class Hello{
 - **📚 Build a small Library System** using Book. java , collections, and file I/0.
 
 ---
+
+## 4. Sample Class: Student.java(Bonus Content)
+```
+public class Student {
+   String name;
+   int rollNo;
+   double marks;
+
+   public Student(String name, int rollNo, double marks){
+      this.name = name;
+      this.rollNo = rollNo;
+      this.marks = marks;
+   }
+
+   public void display(){
+      System.out.println("Name: " + name);
+      System.out.println("Roll No: " + rollNo);
+      System.out.println("Marks: " + marks);
+   }
+
+   public static void main (String[] args) {
+      Student s1 = new Student("John", 101, 89.5);
+      s1.display();
+   }
+}
+```
+**Try modifying it:**
+- Add grades, age, address
+- Save data to file
+- Load list of students using ArrayList
+  
+---
