@@ -106,3 +106,51 @@ public class Hello{
 ```
 
 ---
+
+## 📘 2. Core Topics & Program Mapping
+
+## 📝 Program List & Concepts
+
+| File Name                        | Concept Demonstrated                                   |
+|-----------------------------------|-------------------------------------------------------|
+| `greatsmall.java`                | Find greatest and smallest number from user input     |
+| `arrayAddition.java`              | Add two 2D arrays entered by user                     |
+| `factorial.java`                  | Calculate factorial of a number                       |
+| `fibonacci.java`                  | Display Fibonacci series up to N terms                |
+| `constructorOverloading.java`     | Demonstrate constructor overloading                   |
+| `methodOverloading.java`          | Demonstrate method overloading                        |
+| `inheritance.java`                | Inheritance with Shape, Triangle, Rectangle, Square   |
+| `abstractClass.java`              | Abstract class and method example                     |
+| `interfaces.java`                 | Using interfaces for Area and Perimeter               |
+| `stackDataStruture.java`          | Stack data structure implementation                   |
+| `Exceptions.java`                 | Exception handling (Arithmetic, Array Out of Bounds)  |
+| `throwAndthrows.java`             | Use of `throw` and `throws` in exception handling     |
+| `sortString.java`                 | Sort words in a string alphabetically                 |
+| `multiThreads.java`               | Create and run multiple threads                       |
+| `readWriteByteStream.java`        | Read/write byte streams to a file                     |
+| `readWriteCharacterStream.java`   | Read/write character streams to a file                |
+| `wrapperClass.java`               | Use of wrapper classes and autoboxing/unboxing        |
+| `userDefinedMapAndArraylist.java` | Store user-defined objects in ArrayList and Map       |
+| `sortReverseSearch.java`          | Use Collections: sort, reverse, search                |
+| `Sw_image.java`                   | Display image and caption using Swing (`uu.png`)      |
+| `ArithmeticOperation.java`        | GUI for arithmetic operations (add, sub, mul, div)    |
+| `KeyListenerDe.java`              | Key listener events in Swing                          |
+| `InsertIntoEmployeeTable.java`    | JDBC: Insert data into employee table                 |
+| `SelectAllEmployee.java`          | JDBC: Select all data from employee table             |
+| `MyDemo.java`                     | Simple Swing GUI example                              |
+| `MyPackage/packageDemo.java`      | Java package usage example                            |
+| `MyOtherPackage/Person.java`      | User-defined class for package demo                   |
+| `output.txt`, `output1.txt`       | Output files for stream examples                      |
+| `uu.png`                          | Image file for GUI demo                               |
+
+---
+
+## 🔧 3. New Use Case Ideas (For Practice)
+🧪 Try these mini-projects:
+- **📊 Build a Student Report Card system** using Student. java , arrays, and file writing.
+- **💬 Create a Chat-like GUI** using swing + Threads .
+- **💰 Generate Salary Slips** using the Employee. java class and GUI.
+- **📁 Export Data to File** (CSV format) using ArrayList + file Stream.
+- **📚 Build a small Library System** using Book. java , collections, and file I/0.
+
+---
